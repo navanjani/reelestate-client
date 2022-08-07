@@ -1,0 +1,30 @@
+{
+  "English": {
+    "Homepage": {
+      "title": "Welcome to Reel Estate",
+      "listBtn": "See Listings",
+      "aboutBtn": "About Us"
+    }
+  },
+  "Dutch": {
+    "Homepage": {
+      "title": "Welkom bij Reel Estate",
+      "listBtn": "Bekijk woningen",
+      "aboutBtn": "Over ons"
+    }
+  },
+    "German": {
+      "Homepage": {
+        "title": "Willkommen bei Reel Estate",
+        "listBtn": "Immobilienangebote",
+        "aboutBtn": "Über uns"
+      }
+    },
+      "Spanish": {
+        "Homepage": {
+          "title": "Bienvenido a Reel estate",
+          "listBtn": "Venta propiedades",
+          "aboutBtn": "Sobre nosotras"
+        }
+  }
+}
