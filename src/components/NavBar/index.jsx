@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 
-const NavBar = () => {
+const NavBar = ({ language }) => {
   return (
     <div className="nav-bar-container container-fluid">
       <div className="nav-bar-items">
@@ -23,14 +23,14 @@ const NavBar = () => {
             |
             <NavLink
               className={({ isActive }) => (isActive ? "link-active" : "link")}
-              to="/signup"
+              to="/viewing"
             >
               <li>Schedule Viewings</li>
             </NavLink>
             |
             <NavLink
               className={({ isActive }) => (isActive ? "link-active" : "link")}
-              to="/patients"
+              to={`/about/${language}`}
             >
               <li>About Us</li>
             </NavLink>

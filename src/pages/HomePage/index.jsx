@@ -4,8 +4,7 @@ import { ButtonComponent, SelectComponent } from "../../components";
 import "./home.scss";
 import { Link } from "react-router-dom";
 
-const HomePage = () => {
-  const [language, setLanguage] = useState("English");
+const HomePage = ({ language, setLanguage }) => {
   const trans = locale(language).Homepage;
 
   return (
@@ -25,7 +24,9 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="col">
-          <ButtonComponent title={trans.aboutBtn} />
+          <Link to={`/about/${language}`}>
+            <ButtonComponent title={trans.aboutBtn} />
+          </Link>
         </div>
       </div>
       <div className="row btn-container">
