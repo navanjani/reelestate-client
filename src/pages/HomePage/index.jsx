@@ -35,6 +35,7 @@ const HomePage = ({ language, setLanguage }) => {
           handleOnChange={(event) => setLanguage(event.target.value)}
           options={languageOptions}
           allowNull={false}
+          label="Language"
         />
       </div>
     </div>

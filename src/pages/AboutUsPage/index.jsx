@@ -1,15 +1,17 @@
-import { BASE_URL } from "../../config";
 import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
-import { AgentCard } from "../../components";
-import { useParams } from "react-router-dom";
+import { AgentCard, ButtonComponent, SelectComponent } from "../../components";
+import { locale, languageOptions, BASE_URL } from "../../config";
+import { Link, useParams } from "react-router-dom";
 
 const AboutUsPage = () => {
   const [agents, setAgents] = useState([]);
   const { language } = useParams();
+  const trans = locale(language).Homepage;
 
   const getAgents = async () => {
     const response = await axios.get(`${BASE_URL}/agents`);
+    console.log(response.data);
     setAgents(response.data);
   };
 
@@ -33,8 +35,22 @@ const AboutUsPage = () => {
             key={agent.id}
             name={agent.firstName + " " + agent.lastName}
             image={agent.imageUrl}
+            motto={agent.motto}
+            email={agent.email}
           />
         ))}
+      <div className="row btn-container">
+        <div className="col">
+          <Link to="/listing">
+            <ButtonComponent title={trans.listBtn} />{" "}
+          </Link>
+        </div>
+        <div className="col">
+          <Link to="/viewing">
+            <ButtonComponent title={trans.viewingBtn} />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

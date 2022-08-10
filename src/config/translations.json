@@ -3,28 +3,32 @@
     "Homepage": {
       "title": "Welcome to Reel Estate",
       "listBtn": "See Listings",
-      "aboutBtn": "About Us"
+      "aboutBtn": "About Us",
+      "viewingBtn": "Schedule Viewing"
     }
   },
   "Dutch": {
     "Homepage": {
       "title": "Welkom bij Reel Estate",
       "listBtn": "Bekijk woningen",
-      "aboutBtn": "Over ons"
+      "aboutBtn": "Over ons",
+      "viewingBtn": "Bezichtiging aanvragen"
     }
   },
     "German": {
       "Homepage": {
         "title": "Willkommen bei Reel Estate",
         "listBtn": "Immobilienangebote",
-        "aboutBtn": "Über uns"
+        "aboutBtn": "Über uns",
+        "viewingBtn": "Exposé anforden"
       }
     },
       "Spanish": {
         "Homepage": {
           "title": "Bienvenido a Reel estate",
           "listBtn": "Venta propiedades",
-          "aboutBtn": "Sobre nosotras"
+          "aboutBtn": "Sobre nosotras",
+          "viewingBtn": "Programe una cita"
         }
   }
 }

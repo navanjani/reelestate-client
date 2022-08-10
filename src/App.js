@@ -7,6 +7,9 @@ import { useState } from "react";
 
 function App() {
   const [language, setLanguage] = useState("English");
+  const scheduleViewing = (formData) => {
+    console.log(formData);
+  };
   return (
     <div className="App">
       <NavBar language={language} />
@@ -20,7 +23,10 @@ function App() {
           path="/about/:language"
           element={<AboutUsPage language={language} />}
         />
-        <Route path="/viewing" element={<ViewingPage />} />
+        <Route
+          path="/viewing"
+          element={<ViewingPage scheduleViewing={scheduleViewing} />}
+        />
       </Routes>
     </div>
   );

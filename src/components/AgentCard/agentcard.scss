@@ -1,6 +1,13 @@
 .card-container{
-  text-align: left;
-  width: 400px;
+  text-align: center;
+  width: 800px;
   padding: 30px 40px;
   margin: 20px auto;
+  font-size: 1.2rem;
+
+
+  .img {
+    width: 50px;
+    height: 100px;
+  }
 }
