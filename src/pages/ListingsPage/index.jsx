@@ -31,6 +31,7 @@ const ListingsPage = () => {
       0
     );
     setMinBudget(min.priceEuro);
+
     const max = listings.reduce(
       (previousValue, currentValue) =>
         previousValue.priceEuro > currentValue.priceEuro
@@ -85,7 +86,7 @@ const ListingsPage = () => {
         />
 
         <RangeComponent
-          title="min.floor"
+          title="max.floor"
           minValue={minFloor}
           maxValue={maxFloor}
           value={searchArea}

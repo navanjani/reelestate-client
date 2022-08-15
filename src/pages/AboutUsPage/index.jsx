@@ -7,7 +7,7 @@ import { Link, useParams } from "react-router-dom";
 const AboutUsPage = () => {
   const [agents, setAgents] = useState([]);
   const { language } = useParams();
-  const trans = locale(language).Homepage;
+  const { AboutUs } = locale(language);
 
   const getAgents = async () => {
     const response = await axios.get(`${BASE_URL}/agents`);
@@ -42,12 +42,12 @@ const AboutUsPage = () => {
       <div className="row btn-container">
         <div className="col">
           <Link to="/listing">
-            <ButtonComponent title={trans.listBtn} />{" "}
+            <ButtonComponent title={AboutUs.listBtn} />{" "}
           </Link>
         </div>
         <div className="col">
           <Link to="/viewing">
-            <ButtonComponent title={trans.viewingBtn} />
+            <ButtonComponent title={AboutUs.viewingBtn} />
           </Link>
         </div>
       </div>

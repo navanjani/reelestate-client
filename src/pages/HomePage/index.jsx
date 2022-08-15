@@ -1,15 +1,14 @@
 import { locale, languageOptions } from "../../config";
-import { useState } from "react";
 import { ButtonComponent, SelectComponent } from "../../components";
 import "./home.scss";
 import { Link } from "react-router-dom";
 
 const HomePage = ({ language, setLanguage }) => {
-  const trans = locale(language).Homepage;
+  const { Homepage } = locale(language);
 
   return (
     <div className="container page-container">
-      <h1>{trans.title}</h1>
+      <h1>{Homepage.title}</h1>
 
       <div className="row">
         <img
@@ -20,12 +19,12 @@ const HomePage = ({ language, setLanguage }) => {
       <div className="row btn-container">
         <div className="col">
           <Link to="/listing">
-            <ButtonComponent title={trans.listBtn} />{" "}
+            <ButtonComponent title={Homepage.listBtn} />{" "}
           </Link>
         </div>
         <div className="col">
           <Link to={`/about/${language}`}>
-            <ButtonComponent title={trans.aboutBtn} />
+            <ButtonComponent title={Homepage.aboutBtn} />
           </Link>
         </div>
       </div>
